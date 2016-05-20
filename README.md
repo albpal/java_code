@@ -1,2 +1,2 @@
-# pocs
+# PoCs
 Proof of Concepts Repository
