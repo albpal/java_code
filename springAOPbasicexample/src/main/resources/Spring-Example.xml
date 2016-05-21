@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+		http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+	<bean id="Account" class="com.albpal.pocs.bank.NormalAccount" scope="prototype" />
+	<bean id="TransactionManager" class="com.albpal.pocs.bank.TransactionManager" />
+	<bean id="Logger" class="com.albpal.pocs.logging.Logger" />
+
+	<aop:config>
+		<aop:aspect id="myAspect" ref="Logger">
+			<aop:pointcut id="transfer" expression="execution(* com.albpal.pocs.bank.TransactionManager.transfer(com.albpal.pocs.bank.BankAccount, com.albpal.pocs.bank.BankAccount, int)) and args(fromAccount, toAccount, amount)"/>
+			<aop:before pointcut-ref="transfer" method="informAboutATransactionStarting"/>
+			<aop:after pointcut-ref="transfer" method="informAboutATransactionEnding"/>
+		</aop:aspect>
+	</aop:config>
+
+</beans>
