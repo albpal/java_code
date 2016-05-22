@@ -39,3 +39,29 @@ Final scenario:
         Account type com.albpal.pocs.bank.NormalAccount with id 1111111 has 500€
         Account type com.albpal.pocs.bank.NormalAccount with id 2222222 has 500€
 ```
+
+## testngbasicexample
+Application that uses sprint and testNG to work with the TDD paradigm
+### How to run it
+
+```bash
+$ cd testngbasicexample
+$ mvn clean test
+```
+
+Output:
+```bash
+.........
+Square Area = 100.0
+Rectangle Area = 200.0
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.283 sec
+.........
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+.........
+```
