@@ -65,3 +65,19 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 .........
 ```
+
+## springRESTful
+RESTful service build using spring
+### How to run it
+
+```bash
+$ cd springRESTful
+$ mvn clean package
+$ java -jar target/gs-rest-service-0.1.0.jar
+```
+
+Output:
+```bash
+http://localhost:8080/greeting?name=Albert
+{"id":1,"content":"Hello, Albert!"}
+```
