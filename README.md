@@ -41,7 +41,7 @@ Final scenario:
 ```
 
 ## testngbasicexample
-Application that uses sprint and testNG to work with the TDD paradigm
+Application that uses testNG to work with the TDD paradigm
 ### How to run it
 
 ```bash
@@ -80,4 +80,27 @@ Output:
 ```bash
 http://localhost:8080/greeting?name=Albert
 {"id":1,"content":"Hello, Albert!"}
+```
+
+## springtestng
+Application that uses spring and testNG to work with the TDD paradigm
+### How to run it
+
+```bash
+$ cd springtestng
+$ mvn clean test
+```
+
+Output:
+```bash
+.........
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 5.073 s
+[INFO] Finished at: 2016-06-05T12:49:04+02:00
+[INFO] Final Memory: 16M/226M
+[INFO] ------------------------------------------------------------------------
 ```
